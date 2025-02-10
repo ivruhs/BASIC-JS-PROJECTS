@@ -32,7 +32,7 @@ let playerDetails = {
 
 let cardsArray = ["A", 2, 3, 4, 5, 6, 7, 8, 9, 10, "J", "Q", "K"];
 
-// Returns a random index between 0 and 12 (inclusive)
+// Returns a random index between 0 and 12 (including 0 and 12 both)
 function generateRandomCards() {
   return Math.floor(Math.random() * 13);
 }
@@ -81,7 +81,7 @@ function newGame() {
   playerCardDetails.textContent = "";
   dealerCardDetails.textContent = "";
 
-  // Deal two cards to player
+  // generating 2 cards of delaer
   let playerCard1 = generateRandomCards();
   let playerCard2 = generateRandomCards();
   playerCardsArray.push(playerCard1, playerCard2);
@@ -89,17 +89,17 @@ function newGame() {
   playerCardDetails.textContent = `${cardsArray[playerCard1]} ${cardsArray[playerCard2]}`;
   playerSum.textContent = playerCardSum;
 
-  // Dealer gets one card face-up, second card hidden initially
+  // Dealer gets one card face-up, 2nd card hidden
   let dealerCard1 = generateRandomCards();
   dealerCardsArray.push(dealerCard1);
-  generateDealerCards(); // Generate additional dealer card(s) until sum is at least 17
+  generateDealerCards(); // Generate additional dealer cards until sum is at least 17 (ensuring dealer cards sum >=17)
   dealerCardSum = calculateCardSum(dealerCardsArray);
-  // Show only the first dealer card; the rest remain hidden (represented by a question mark)
+  // Show only the first dealer card; rest will be hidden (using ?)
   dealerCardDetails.textContent = `${cardsArray[dealerCardsArray[0]]} ❓`;
   dealerSum.textContent = "❓";
 }
 
-// Handles drawing a card for the player
+// Handling the drawcard function
 function drawCard() {
   if (!newGameStarted) return;
 
@@ -126,11 +126,11 @@ function drawCard() {
   }
 }
 
-// Handles the "stand" action for the player
+// handling the stand function
 function standCard() {
   if (!newGameStarted) return;
 
-  // Reveal dealer's first two cards
+  // show dealer's first two cards
   dealerCardDetails.textContent = `${cardsArray[dealerCardsArray[0]]} ${
     cardsArray[dealerCardsArray[1]]
   }`;
