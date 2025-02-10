@@ -1,0 +1,321 @@
+:root {
+  --color-bg: #1a1e2e;
+  --color-card: #2a2f45;
+  --color-text: #e0e0e0;
+  --color-primary: #4fd1c5;
+  --color-secondary: #9f7aea;
+  --color-accent: #f6ad55;
+  --color-danger: #fc8181;
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+  padding: 1rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+h1 {
+  color: var(--color-primary);
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-align: center;
+  font-size: clamp(1.5rem, 5vw, 3rem);
+  margin-bottom: 1.5rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.game-arena {
+  display: grid;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.dealer-area,
+.player-area {
+  background-color: var(--color-card);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  transition: all 0.3s ease;
+}
+
+.dealer-area:hover,
+.player-area:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.dealer-area > div,
+.player-area > div {
+  width: 100%;
+  text-align: center;
+}
+
+.dealer-area h2,
+.player-area h2 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.dealer-area p,
+.player-area p {
+  font-size: 1rem;
+  color: var(--color-text);
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0.5rem;
+  border-radius: 8px;
+  display: inline-block;
+}
+
+.player-buttons,
+.bet-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.button-18 {
+  background-color: var(--color-primary);
+  color: var(--color-bg);
+  border: none;
+  padding: 0.75rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  outline: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  flex: 1 1 calc(50% - 0.5rem);
+  min-width: 120px;
+  max-width: 200px;
+}
+
+.button-18:hover {
+  background-color: var(--color-secondary);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.button-18:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.new-game {
+  background-color: var(--color-secondary);
+  width: 100%;
+  max-width: none;
+}
+
+.draw-card,
+.stand-card {
+  background-color: var(--color-accent);
+}
+
+.submit {
+  background-color: var(--color-primary);
+}
+
+.bet-amount {
+  border: 2px solid var(--color-primary);
+  padding: 0.75rem;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: var(--color-text);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  width: 100%;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.bet-amount::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.bet-amount:hover,
+.bet-amount:focus {
+  border-color: var(--color-secondary);
+  box-shadow: 0 0 0 3px rgba(159, 122, 234, 0.2);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.endGame-button {
+  background-color: var(--color-danger);
+  width: 100%;
+  text-align: center;
+  margin-top: 1rem;
+  max-width: none;
+}
+
+.player-info {
+  background-color: var(--color-card);
+  color: var(--color-text);
+  border: 2px solid var(--color-primary);
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.player-info:hover {
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+}
+
+.player-info h2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--color-primary);
+}
+
+.player-info p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .dealer-area,
+  .player-area {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .dealer-area > div,
+  .player-area > div {
+    flex: 1;
+  }
+
+  .button-18 {
+    font-size: 1rem;
+  }
+
+  .bet-amount {
+    width: auto;
+    flex: 1;
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 14px;
+  }
+
+  .container {
+    padding: 0.5rem;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .dealer-area,
+  .player-area {
+    padding: 1rem;
+  }
+
+  .button-18 {
+    padding: 0.6rem 0.8rem;
+    font-size: 0.8rem;
+    flex: 1 1 100%;
+  }
+
+  .player-info {
+    padding: 0.8rem;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.game-arena {
+  animation: fadeIn 0.5s ease-out;
+}
+
+.button-18 {
+  position: relative;
+  overflow: hidden;
+}
+
+.button-18::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 5px;
+  height: 5px;
+  background: rgba(255, 255, 255, 0.5);
+  opacity: 0;
+  border-radius: 100%;
+  transform: scale(1, 1) translate(-50%);
+  transform-origin: 50% 50%;
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(0, 0);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(40, 40);
+    opacity: 0;
+  }
+}
+
+.button-18:focus:not(:active)::after {
+  animation: ripple 1s ease-out;
+}
