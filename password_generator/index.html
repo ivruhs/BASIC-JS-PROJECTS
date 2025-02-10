@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random Password Generator</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="main-title">Random Password Generator</h1>
+      <p class="subtitle">Create secure, customizable passwords, in a click</p>
+      <div class="display-box">
+        <div class="top-box">
+          <div class="password-display">
+            <input
+              type="text"
+              id="generatedPassword"
+              readonly
+              placeholder="Generated password will appear here"
+            />
+            <button
+              id="copyButton"
+              aria-label="Copy password"
+              onclick="copyValue()"
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M16.6667 7.5H9.16667C8.24619 7.5 7.5 8.24619 7.5 9.16667V16.6667C7.5 17.5871 8.24619 18.3333 9.16667 18.3333H16.6667C17.5871 18.3333 18.3333 17.5871 18.3333 16.6667V9.16667C18.3333 8.24619 17.5871 7.5 16.6667 7.5Z"
+                  stroke="white"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M4.16667 12.5H3.33333C2.89131 12.5 2.46738 12.3244 2.15482 12.0118C1.84226 11.6993 1.66667 11.2754 1.66667 10.8333V3.33333C1.66667 2.89131 1.84226 2.46738 2.15482 2.15482C2.46738 1.84226 2.89131 1.66667 3.33333 1.66667H10.8333C11.2754 1.66667 11.6993 1.84226 12.0118 2.15482C12.3244 2.46738 12.5 2.89131 12.5 3.33333V4.16667"
+                  stroke="white"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="slider-container">
+          <input
+            type="range"
+            id="rangeSlider"
+            min="6"
+            max="15"
+            value="10"
+            step="1"
+          />
+          <div id="sliderValue">Password Length: 10</div>
+        </div>
+        <div class="customisation">
+          <label class="checkbox-container">
+            <input
+              type="checkbox"
+              name="uppercase"
+              id="uppercaseCheckbox"
+              checked
+            />
+            <span class="checkmark"></span>
+            Uppercase
+          </label>
+          <label class="checkbox-container">
+            <input
+              type="checkbox"
+              name="lowercase"
+              id="lowercaseCheckbox"
+              checked
+            />
+            <span class="checkmark"></span>
+            Lowercase
+          </label>
+          <label class="checkbox-container">
+            <input
+              type="checkbox"
+              name="numbers"
+              id="numbersCheckbox"
+              checked
+            />
+            <span class="checkmark"></span>
+            Numbers
+          </label>
+          <label class="checkbox-container">
+            <input type="checkbox" name="symbols" id="symbolsCheckbox" />
+            <span class="checkmark"></span>
+            Symbols
+          </label>
+        </div>
+        <div class="new-psw-btn">
+          <button class="generate_new_psw" onclick="generatePassword()">
+            Generate New Psw
+          </button>
+          <button class="reset_btn generate_new_psw" onclick="reset()">
+            Reset
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
