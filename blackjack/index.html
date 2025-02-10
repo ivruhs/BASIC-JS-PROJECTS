@@ -3,54 +3,127 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Blackjack - Rules</title>
+    <link rel="stylesheet" href="rules.css" />
   </head>
   <body>
-    <div class="container">
-      <h1>BLACKJACK</h1>
-      <div class="game-arena">
-        <div class="dealer-area">
-          <div class="info">
-            <h2>Dealer's Hand</h2>
-            <p class="dealer-card-details"></p>
+    <div class="hero">
+      <div class="content">
+        <h1 class="title">
+          Welcome to <span class="highlight">Blackjack</span>
+        </h1>
+        <p class="subtitle">The Ultimate Card Game</p>
+        <div class="rules">
+          <h2>Blackjack Game Rules</h2>
+          <div class="rule-section">
+            <h3>1. Objective of the Game</h3>
+            <p>
+              The goal of the game is to get a hand value as close to
+              <span class="highlight">21</span> as possible, without going over.
+              If the total value of your cards exceeds 21, you lose
+              automatically (bust). The player competes against the dealer, and
+              the winner is the one who has the hand closest to 21.
+            </p>
           </div>
-          <div class="sum">
-            <h2>Dealer's Sum</h2>
-            <p class="dealer-sum"></p>
+          <div class="rule-section">
+            <h3>2. Card Values</h3>
+            <ul>
+              <li><span class="highlight">Ace (A)</span> is worth 1.</li>
+              <li>
+                <span class="highlight">Face cards (King, Queen, Jack)</span>
+                are worth 10.
+              </li>
+              <li>
+                <span class="highlight">Number cards (2-10)</span> are worth
+                their face value.
+              </li>
+            </ul>
+          </div>
+          <div class="rule-section">
+            <h3>3. The Deal</h3>
+            <p>
+              Both the player and the dealer are dealt two cards at the
+              beginning of the round. The player's cards are shown face-up. The
+              dealer's cards are dealt with one face-up and one face-down card
+              (the "hole" card).
+            </p>
+          </div>
+          <div class="rule-section">
+            <h3>4. Player's Turn</h3>
+            <p>The player has the option to:</p>
+            <ul>
+              <li>
+                <span class="highlight">Hit:</span> Take another card to
+                increase the hand value.
+              </li>
+              <li>
+                <span class="highlight">Stand:</span> Keep the current hand and
+                end the player's turn.
+              </li>
+            </ul>
+            <p>
+              The player can hit multiple times, but if the total value of the
+              hand exceeds 21, the player busts and loses the round.
+            </p>
+          </div>
+          <div class="rule-section">
+            <h3>5. Dealer's Turn</h3>
+            <p>
+              After the player stands, the dealer reveals their hidden card
+              (hole card). The dealer will always draw until their hand value is
+              at least 17. If the dealer busts (goes over 21), the player wins
+              automatically.
+            </p>
+          </div>
+          <div class="rule-section">
+            <h3>6. Winning the Game</h3>
+            <p>The player wins if:</p>
+            <ul>
+              <li>Their hand value is closer to 21 than the dealer’s hand.</li>
+              <li>The dealer busts (goes over 21).</li>
+            </ul>
+            <p>The dealer wins if:</p>
+            <ul>
+              <li>
+                The dealer’s hand value is closer to 21 than the player’s hand.
+              </li>
+              <li>The player busts (goes over 21).</li>
+            </ul>
+            <p>
+              If both the player and the dealer have the same hand value, the
+              round results in a push (a tie), and the player’s bet is returned.
+            </p>
+          </div>
+          <div class="rule-section">
+            <h3>7. Blackjack</h3>
+            <p>
+              When the sum of cards of the player is equal to 21, we say it's a
+              <span class="highlight">Blackjack</span>.
+            </p>
+          </div>
+          <div class="rule-section">
+            <h3>8. Betting</h3>
+            <p>
+              The player must place a bet before the round begins. The minimum
+              and maximum bet limits are defined. If the player wins, they
+              receive the amount equal to their bet. If the player loses, they
+              lose their bet amount. If the player ties with the dealer, their
+              bet is returned.
+            </p>
+          </div>
+          <div class="rule-section">
+            <h3>9. Game Restart</h3>
+            <p>
+              Once a round is complete (win, loss, or push), the game can be
+              restarted. The player can choose to place a new bet for the next
+              round.
+            </p>
           </div>
         </div>
-        <div class="player-area">
-          <div class="info">
-            <h2>Player's Hand</h2>
-            <p class="player-card-details"></p>
-          </div>
-          <div class="sum">
-            <h2>Player's Sum</h2>
-            <p class="player-sum"></p>
-          </div>
-        </div>
-        <div class="player-buttons">
-          <button class="new-game button-18">NEW GAME</button> <br />
-          <button class="draw-card button-18">Draw</button>
-          <button class="stand-card button-18">Stand</button>
-        </div>
-        <div class="bet-info">
-          <button class="submit button-18" type="submit">Place Bet</button>
-          <input
-            type="number"
-            class="bet-amount"
-            placeholder="Enter your bet amount"
-          />
-        </div>
-        <div class="endGame-button button-18">END GAME</div>
-        <div class="player-info">
-          <h2 class="player-name">Player :</h2>
-          <p class="current-balance">Current Balance: 💰200</p>
-          <p class="initial-balance">Initial Balance: 💰200</p>
-        </div>
+        <button id="startButton" class="glow-on-hover">Let's Begin</button>
       </div>
     </div>
+
+    <script src="rules.js"></script>
   </body>
-  <script src="script.js"></script>
 </html>
