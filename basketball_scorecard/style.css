@@ -1,0 +1,228 @@
+:root {
+  --color-bg: #1a202c;
+  --color-text: #e2e8f0;
+  --color-primary: #4299e1;
+  --color-secondary: #ed8936;
+  --color-accent: #48bb78;
+  --color-card-bg: #2d3748;
+  --color-button: #4a5568;
+  --color-button-hover: #718096;
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  line-height: 1.5;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+h1 {
+  color: var(--color-primary);
+  font-size: clamp(2rem, 5vw, 3rem);
+  text-align: center;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.teams {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 2rem;
+  width: 100%;
+}
+
+.team {
+  background-color: var(--color-card-bg);
+  border-radius: 12px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  flex: 1;
+  min-width: 250px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-secondary);
+}
+
+.scoreA,
+.scoreB {
+  font-size: 4rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.scoreButtons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.scrbtn {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text);
+  background-color: var(--color-button);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.scrbtn:hover {
+  background-color: var(--color-button-hover);
+}
+
+.scrbtn:active {
+  transform: scale(0.95);
+}
+
+.btn-class {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.reset-button,
+.clear-button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text);
+  background-color: var(--color-secondary);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.reset-button:hover,
+.clear-button:hover {
+  background-color: #dd6b20;
+}
+
+.reset-button:active,
+.clear-button:active {
+  transform: scale(0.95);
+}
+
+.winners {
+  font-size: 1.5rem;
+  color: var(--color-accent);
+  margin-top: 1rem;
+}
+
+.winner_name {
+  font-size: 1.25rem;
+  color: var(--color-text);
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .teams {
+    flex-direction: column;
+  }
+
+  .team {
+    width: 100%;
+  }
+
+  .btn-class {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .reset-button,
+  .clear-button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  .scoreA,
+  .scoreB {
+    font-size: 3rem;
+  }
+
+  .scrbtn {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.container > * {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.container > *:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.container > *:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.container > *:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.container > *:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.container > *:nth-child(5) {
+  animation-delay: 0.5s;
+}
