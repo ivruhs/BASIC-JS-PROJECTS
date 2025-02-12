@@ -1,0 +1,359 @@
+:root {
+  --primary-color: #3498db;
+  --primary-light: #ebf5fb;
+  --primary-dark: #2980b9;
+  --secondary-color: #2ecc71;
+  --danger-color: #e74c3c;
+  --danger-light: #fdedec;
+  --background-color: #ecf0f1;
+  --card-background: #ffffff;
+  --text-color: #34495e;
+  --text-light: #7f8c8d;
+  --border-color: #bdc3c7;
+  --font-family: "Roboto", sans-serif;
+  --box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  padding: 40px 20px;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.invoice-card {
+  background-color: var(--card-background);
+  border-radius: 16px;
+  box-shadow: var(--box-shadow);
+  padding: 60px;
+  transition: var(--transition);
+}
+
+.invoice-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.invoice-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+  padding-bottom: 30px;
+  border-bottom: 2px solid var(--primary-light);
+}
+
+.logo {
+  max-width: 180px;
+  height: auto;
+}
+
+.header-right h1 {
+  font-size: 3rem;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+  letter-spacing: -1px;
+}
+
+.company-name {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.company-address,
+.company-contact {
+  color: var(--text-light);
+  font-size: 0.95rem;
+}
+
+.invoice-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.info-block label,
+.client-row h3 {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--text-light);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.info-block input,
+.client-details input,
+.client-details textarea,
+.invoice-items td input,
+.discount-row input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: var(--transition);
+  background-color: #f8f9fa;
+}
+
+.discount-row input {
+  width: 30%;
+}
+
+.info-block input:focus,
+.client-details input:focus,
+.client-details textarea:focus,
+.invoice-items td input:focus,
+.discount-row input:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+  outline: none;
+  background-color: #fff;
+}
+
+.client-row h3 {
+  color: var(--primary-color);
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+}
+
+.invoice-items {
+  margin-top: 50px;
+}
+
+.invoice-items table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 12px;
+}
+
+.invoice-items th {
+  background-color: var(--primary-light);
+  color: var(--primary-dark);
+  padding: 15px;
+  text-align: left;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+}
+
+.invoice-items td {
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.invoice-items tr td:first-child {
+  border-left: 1px solid var(--border-color);
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.invoice-items tr td:last-child {
+  border-right: 1px solid var(--border-color);
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.invoice-items tr {
+  transition: var(--transition);
+}
+
+.invoice-items tr:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+}
+
+.invoice-items td input {
+  border: none;
+  background: transparent;
+  font-size: 1rem;
+  color: var(--text-color);
+}
+
+.add-item-container {
+  margin: 30px 0;
+  text-align: right;
+}
+
+.invoice-summary {
+  background-color: var(--primary-light);
+  border-radius: 12px;
+  padding: 30px;
+  margin-top: 50px;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+}
+
+.final-total {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 2px solid rgba(52, 152, 219, 0.2);
+}
+
+.invoice-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 50px;
+}
+
+.btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: var(--transition);
+  margin-left: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+#printInvoice,
+#savePDF {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+#printInvoice:hover,
+#savePDF:hover {
+  background-color: var(--primary-dark);
+}
+
+#resetInvoice {
+  background-color: var(--danger-color);
+  color: white;
+}
+
+#resetInvoice:hover {
+  background-color: #c0392b;
+}
+
+#addItem {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+#addItem:hover {
+  background-color: #27ae60;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeInUp 0.5s ease-out forwards;
+}
+
+@media (max-width: 768px) {
+  .invoice-card {
+    padding: 30px;
+  }
+
+  .invoice-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header-right {
+    margin-top: 30px;
+  }
+
+  .invoice-items {
+    overflow-x: auto;
+  }
+
+  .invoice-actions {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+    margin: 10px 0 0 0;
+  }
+}
+
+/* Print styles */
+@media print {
+  body {
+    background-color: white;
+  }
+
+  .invoice-card {
+    box-shadow: none;
+  }
+
+  .invoice-actions {
+    display: none;
+  }
+}
+
+/* Ensure the item description cell doesn't shrink */
+.item-description {
+  width: 200px; /* Set a fixed width for item description */
+  min-width: 200px; /* Prevent it from getting smaller */
+  max-width: 200px; /* Keep it consistent */
+  overflow: hidden; /* Prevent overflow outside the cell */
+}
+
+/* Enable scrolling inside the textarea */
+.item-description textarea {
+  width: 100%; /* Fills the cell */
+  height: 60px; /* Set a reasonable default height */
+  background-color: #f8f9fa; /* Matches table cell background */
+  padding: 10px; /* Adjust padding */
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  font-size: 14px; /* Adjust font size */
+  resize: both; /* Allows manual resizing in both directions */
+  overflow: auto; /* Enables scrollbars for overflow */
+  white-space: normal; /* Allows text wrapping */
+
+  box-sizing: border-box;
+}
+
+/* Optional: Add a slight focus effect */
+.item-description textarea:focus {
+  border-color: #007bff;
+  background-color: #ffffff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}

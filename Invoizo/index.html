@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>INVOIZO Invoice Generator</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="styles.css" />
+    <!-- External libraries for PDF generation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div id="invoice" class="invoice-card">
+        <!-- Invoice Header -->
+        <header class="invoice-header">
+          <div class="header-left">
+            <!-- Replace with your company logo if desired -->
+            <img src="invoizo.png" alt="Company Logo" class="logo" />
+          </div>
+          <div class="header-right">
+            <h1>Invoice</h1>
+            <p class="company-name">Your Company Name</p>
+            <p class="company-address">E-105, DA-IICT, Gandhinagar - 382007</p>
+            <p class="company-contact">
+              radhakrishn0181@gmail.com | +91-9998258453
+            </p>
+          </div>
+        </header>
+
+        <!-- Invoice Information -->
+        <section class="invoice-info">
+          <div class="info-row">
+            <div class="info-block">
+              <label for="invoiceNumber">Invoice Number</label>
+              <input type="text" id="invoiceNumber" placeholder="INV-001" />
+            </div>
+            <div class="info-block">
+              <label for="invoiceDate">Invoice Date</label>
+              <input type="date" id="invoiceDate" />
+            </div>
+            <div class="info-block">
+              <label for="dueDate">Due Date</label>
+              <input type="date" id="dueDate" />
+            </div>
+          </div>
+          <div class="client-row">
+            <h3>Bill To:</h3>
+            <div class="client-details">
+              <input type="text" id="clientName" placeholder="Client Name" />
+              <textarea
+                id="clientAddress"
+                placeholder="Client Address"
+              ></textarea>
+            </div>
+          </div>
+        </section>
+
+        <!-- Invoice Items Table -->
+        <section class="invoice-items">
+          <table>
+            <thead>
+              <tr>
+                <th>Description</th>
+                <th>Quantity</th>
+                <th>Unit Price</th>
+                <th>Tax (%)</th>
+                <th>Total</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody id="invoiceItems">
+              <!-- Item rows are generated dynamically -->
+            </tbody>
+          </table>
+          <div class="add-item-container">
+            <button id="addItem" class="btn">Add Item</button>
+          </div>
+        </section>
+
+        <!-- Invoice Summary -->
+        <section class="invoice-summary">
+          <div class="summary-row">
+            <span>Subtotal:</span>
+            <span id="subtotal">0.00</span>
+          </div>
+          <div class="summary-row">
+            <span>Total Tax:</span>
+            <span id="totalTax">0.00</span>
+          </div>
+          <div class="summary-row discount-row">
+            <span>Discount: (in Rs)</span>
+            <input type="number" id="discount" value="0" step="0.01" />
+          </div>
+          <div class="summary-row final-total">
+            <span>Total:</span>
+            <span id="total">0.00</span>
+          </div>
+        </section>
+
+        <!-- Invoice Actions -->
+        <section class="invoice-actions">
+          <button id="printInvoice" class="btn">Print Invoice</button>
+          <button id="savePDF" class="btn">Download PDF</button>
+          <button id="resetInvoice" class="btn reset">Reset Invoice</button>
+        </section>
+      </div>
+    </div>
+    <!-- Link to external JavaScript -->
+    <script src="script.js"></script>
+  </body>
+</html>
