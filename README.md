@@ -63,7 +63,7 @@ A **Google Chrome Extension** that allows users to save the URL of the current t
 - One-click saving of the active tab's URL.
 - User-friendly interface with easy-to-delete saved links.
 
-![LeadsTracker](images/leadstracker.png)
+![LeadsTracker](images/LeadsTracker.png)
 
 ---
 
@@ -78,7 +78,7 @@ A versatile **Unit Converter** for different measurement categories:
 - **Area**: Convert square meters to square feet and acres.
 - **Temperature**: Convert Celsius to Fahrenheit and Kelvin dynamically.
 
-![Unit Converter](images/unitconverter.png)
+![Unit Converter](images/UnitConverter.png)
 
 ---
 
