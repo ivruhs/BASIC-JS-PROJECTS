@@ -6,6 +6,18 @@ Welcome to the **Basic JS Projects** collection! 🚀 This repository showcases 
 
 ## 🌟 Featured JavaScript Projects
 
+### 1. [Blackjack Game 🎲](https://blackjackivruhs.netlify.app/)
+
+### 2. [Random Password Generator 🔐](https://pswgeneratorivruhs.netlify.app/)
+
+### 3. [Basketball Scorecard 🏀](https://basketballscorecardivruhs.netlify.app/)
+
+### 4. [Invoizo - Invoice Generator 🧾](https://invoizoivruhs.netlify.app/)
+
+### 5. [LeadsTracker - Chrome Extension 📌]
+
+### 6. [Unit Converter App 🔄](https://unitconvertorivruhs.netlify.app/)
+
 ### 1. Blackjack Game 🎲
 
 A simplified version of the classic Blackjack game where you can:
@@ -15,7 +27,6 @@ A simplified version of the classic Blackjack game where you can:
 - Explore DOM manipulation and event handling in JavaScript.
 
 ![Blackjack Game](images/blackjack-game.png)
-![Link](https://blackjackivruhs.netlify.app/)
 
 ---
 
@@ -28,7 +39,6 @@ Generate secure, random passwords with a click! Key features:
 - Perfect for quick password generation for your daily needs.
 
 ![Password Generator](images/psw-generator.png)
-![Link](https://pswgeneratorivruhs.netlify.app/)
 
 ---
 
@@ -41,7 +51,6 @@ A simple scoreboard for tracking basketball game points. Highlights:
 - Great practice for event handling and state management in JavaScript.
 
 ![Basketball Scorecard](images/basketball-scorecard.png)
-![Link](https://basketballscorecardivruhs.netlify.app/)
 
 ---
 
@@ -55,7 +64,6 @@ A modern invoice generator that saves data using **Local Storage**. Features:
 - Real-time calculations for subtotal, tax, and total amount.
 
 ![Invoizo](images/invoizo.png)
-![Link](https://invoizoivruhs.netlify.app/)
 
 ---
 
@@ -83,7 +91,6 @@ A versatile **Unit Converter** for different measurement categories:
 - **Temperature**: Convert Celsius to Fahrenheit and Kelvin dynamically.
 
 ![Unit Converter](images/UnitConverter.png)
-![Link](https://unitconvertorivruhs.netlify.app/)
 
 ---
 
