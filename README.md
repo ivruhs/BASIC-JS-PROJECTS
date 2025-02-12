@@ -2,6 +2,8 @@
 
 Welcome to the **Basic JS Projects** collection! 🚀 This repository showcases engaging JavaScript projects that help sharpen your coding skills while having fun!
 
+**Note:** The CSS styling for these projects was enhanced using **Vercel v0** to improve the visual experience. 🎨
+
 ## 🌟 Featured JavaScript Projects
 
 ### 1. Blackjack Game 🎲
@@ -24,7 +26,9 @@ Generate secure, random passwords with a click! Key features:
 - Understand randomness and function design in JavaScript.
 - Perfect for quick password generation for your daily needs.
 
-## ![Password Generator](images/psw-generator.png)
+![Password Generator](images/psw-generator.png)
+
+---
 
 ### 3. Basketball Scorecard 🏀
 
@@ -35,6 +39,46 @@ A simple scoreboard for tracking basketball game points. Highlights:
 - Great practice for event handling and state management in JavaScript.
 
 ![Basketball Scorecard](images/basketball-scorecard.png)
+
+---
+
+### 4. Invoizo - Invoice Generator 🧾
+
+A modern invoice generator that saves data using **Local Storage**. Features:
+
+- Add, edit, and delete invoice items dynamically.
+- Store invoice details persistently with Local Storage.
+- Export invoices as PDFs.
+- Real-time calculations for subtotal, tax, and total amount.
+
+![Invoizo](images/invoizo.png)
+
+---
+
+### 5. LeadsTracker - Chrome Extension 🔖
+
+A **Google Chrome Extension** that allows users to save the URL of the current tab while working. Features:
+
+- Store URLs in **Local Storage** for future reference.
+- One-click saving of the active tab's URL.
+- User-friendly interface with easy-to-delete saved links.
+
+![LeadsTracker](images/leadstracker.png)
+
+---
+
+### 6. Unit Converter App 📏
+
+A versatile **Unit Converter** for different measurement categories:
+
+- **Length**: Convert between meters and feet.
+- **Volume**: Convert liters to gallons.
+- **Mass**: Convert kilograms to pounds.
+- **Speed**: Convert km/h to mph.
+- **Area**: Convert square meters to square feet and acres.
+- **Temperature**: Convert Celsius to Fahrenheit and Kelvin dynamically.
+
+![Unit Converter](images/unit-converter.png)
 
 ---
 
