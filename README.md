@@ -78,7 +78,7 @@ A versatile **Unit Converter** for different measurement categories:
 - **Area**: Convert square meters to square feet and acres.
 - **Temperature**: Convert Celsius to Fahrenheit and Kelvin dynamically.
 
-![Unit Converter](images/unit-converter.png)
+![Unit Converter](images/unitconverter.png)
 
 ---
 
